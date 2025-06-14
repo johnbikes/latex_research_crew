@@ -11,7 +11,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'Cat Detection in Images',
+        'topic': 'cat detection in images using the latest object detection frameworks',
         'current_year': str(datetime.now().year)
     }
     

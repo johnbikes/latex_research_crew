@@ -4,14 +4,17 @@ research_task:
     Make sure you find any interesting and relevant information given
     the current year is {current_year}.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    A list with 5 bullet points of the most relevant information about {topic}
   agent: researcher
 
 reporting_task:
   description: >
     Review the context you got and expand each topic into a full section for a report.
     Make sure the report is detailed and contains any and all relevant information.
+    Do not add opinions, reasoning, or inferred content. 
+    Simply organize and restate the data in the specified format.
+    Provide source references at the end of the report inW a format that could align with a bibtex file.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
+    A fully fledged report with the main topics, each with a full section of information and the source references at the end.
     Formatted as markdown without '```'
   agent: reporting_analyst
