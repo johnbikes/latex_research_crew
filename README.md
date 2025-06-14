@@ -3,6 +3,7 @@
 
 # Run
 - `cd research_team`
+- `crewai run`
 
 # Test `pdflatex` and `bibtex` locally
 - `cd test`
