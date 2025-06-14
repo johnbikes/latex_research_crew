@@ -1,4 +1,4 @@
-# View current report
+# View current reports
 - [See the second report)](https://github.com/johnbikes/latex_research_crew/blob/v1.5/research_team/report.pdf)
 - [See the first report (still in markdown format)](https://github.com/johnbikes/latex_research_crew/blob/v1.0/research_team/report_v1.md)
 
