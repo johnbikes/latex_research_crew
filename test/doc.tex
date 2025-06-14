@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{My Document with BibTeX}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+This is a document where I want to cite some references using BibTeX [1].
+For example, \cite{knuthwebsite} discusses programming.
+Also, \cite{latexcompanion} is a great resource for learning LaTeX.
+Another citation is for Einstein's famous equation, \cite{einstein}.
+\textbf{Note:} To make the citations appear, you will need to compile the document with LaTeX and then run BibTeX.
+\begin{enumerate}
+    \item First, compile your LaTeX file using "pdflatex your\_file.tex". This generates a .aux file.
+    \item Then, run BibTeX using "bibtex your\_file". This uses the .aux file and creates a .bbl file.
+    \item Finally, compile your LaTeX file again with "pdflatex your\_file.tex" and once more with "pdflatex your\_file.tex". This will include the .bbl file with the bibliography and correctly render the citations.
+\end{enumerate}
+
+\bibliographystyle{plain} % Or another style like abbrv, ieeetr, etc.
+\bibliography{doc} % The name of your .bib file (without the .bib extension)
+
+\end{document}
