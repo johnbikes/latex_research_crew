@@ -23,6 +23,18 @@ class ResearchTeam():
             config=self.agents_config['reporting_analyst'], # type: ignore[index]
             verbose=True
         )
+    
+    @agent
+    def latex_verifier(self) -> Agent:
+        return Agent(
+            config=self.agents_config['latex_verifier'],
+            verbose=True,
+            allow_code_execution=True,
+            code_execution_mode="safe",  # Uses Docker for safety
+            max_execution_time=60, 
+            max_retry_limit=3
+        )
+    # TODO: reference a Dockerfile based on an image that supports pdflatex and bibtex - pandoc/latex should work
 
     # To learn more about structured task outputs,
     # task dependencies, and task callbacks, check out the documentation:

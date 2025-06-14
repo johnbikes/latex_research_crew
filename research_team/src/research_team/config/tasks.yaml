@@ -1,6 +1,6 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
+    Conduct thorough research about {topic}.
     Make sure you find any interesting and relevant information given
     the current year is {current_year}.
   expected_output: >
@@ -16,5 +16,13 @@ reporting_task:
     Provide source references at the end of the report inW a format that could align with a bibtex file.
   expected_output: >
     A fully fledged report with the main topics, each with a full section of information and the source references at the end.
-    Formatted as markdown without '```'
+    The sections must properly cite the source references using the \cite{}.
+    Formatted as latex without any extra formatting like markdown.
   agent: reporting_analyst
+
+verifier_task:
+  description: >
+    Verify the LaTeX code is correct and can be compiled
+  expected_output: >
+    A confirmation that the LaTeX code is correct and can be compiled
+  agent: latex_verifier
