@@ -22,7 +22,8 @@ reporting_task:
 
 verifier_task:
   description: >
-    Verify the LaTeX code is correct and can be compiled
+    Review the context you got and break it up into the necessary tex and bib files.
+    Verify the LaTeX code is correct and can be compiled.
   expected_output: >
     A confirmation that the LaTeX code is correct and can be compiled
   agent: latex_verifier
