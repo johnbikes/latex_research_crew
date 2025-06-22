@@ -7,6 +7,7 @@ research_task:
     A list with 5 bullet points of the most relevant information about {topic}
   agent: researcher
 
+# Keep the data in plain text without any extra formatting like markdown or escape characters.
 reporting_task:
   description: >
     Review the context you got and expand each topic into a full section for a report.
@@ -16,23 +17,23 @@ reporting_task:
     Provide source references at the end of the report in a format that could align with a bibtex file.
   expected_output: >
     A fully fledged report with the main topics, each with a full section of information and the source references at the end.
-    The sections must properly cite the source references using the \cite{}.
+    The sections must properly cite the source references using \cite{}.
     Formatted as latex without any extra formatting like markdown.
-    # Make sure to split up the LaTeX into tex and bib files.
+    Make sure the bibliograpy is named "report_new" in the tex.
   agent: reporting_analyst
 
+# Make sure to resolve any new line characters properly before writing the files.
 splitter_task:
   description: >
-    Split the report into a list of sections, each with its own title and content.
-    Make sure to include any source references at the end of the report in a format that could align with a bibtex file.
+    Review the context you got and split it up into the necessary tex and bib files.
   expected_output: >
-    A list of sections with their respective titles and contents
+    LaTeX split up into tex and bib files.
   agent: latex_expert
 
-verifier_task:
-  description: >
-    Review the context you got and break it up into the necessary tex and bib files.
-    Verify the LaTeX code is correct and can be compiled.
-  expected_output: >
-    A confirmation that the LaTeX code is correct and can be compiled
-  agent: latex_verifier
+# verifier_task:
+#   description: >
+#     Review the context you got and break it up into the necessary tex and bib files.
+#     Verify the LaTeX code is correct and can be compiled.
+#   expected_output: >
+#     A confirmation that the LaTeX code is correct and can be compiled
+#   agent: latex_verifier
